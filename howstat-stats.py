@@ -69,7 +69,7 @@ def get_data(url, user_input):
     if user_input == '1' or user_input == '3':
         out_df = get_country_players(cric_format, data_df)
         if len(out_df['Name']) == 0:
-            print(country_name.capitalize() + ' has not played any matches in the ' + cric_format + ' format')
+            print(country_name.title() + ' has not played any matches in the ' + cric_format + ' format')
             sys.exit()
     elif user_input == '2':
         out_df = data_df.loc[1:6, 0:1]
